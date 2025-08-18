@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <meta name="description" content="Cutting-edge portfolio featuring 3D animations, particle effects, and real-time APIs">
+    
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/js/main.js" as="script">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    
+    <div class="preloader">
+        <div class="preloader-spinner">
+            <div class="spinner-sector spinner-sector-red"></div>
+            <div class="spinner-sector spinner-sector-blue"></div>
+            <div class="spinner-sector spinner-sector-green"></div>
+        </div>
+        <p class="preloader-text">Portfolio Website</p>
+    </div>
+    
+    <div class="container">
+        <nav class="glass-nav">
+            <div class="nav-brand">
+                <span class="logo-emoji"></span>
+                <span class="logo-text">My Portfolio</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link" data-hover="Home">Home</a></li>
+                <li><a href="profile.html" class="nav-link" data-hover="Bio">Profile</a></li>
+                <li><a href="cv.html" class="nav-link" data-hover="Resume">CV</a></li>
+                <li><a href="education.html" class="nav-link" data-hover="Skills">Education</a></li>
+                <li><a href="projects.html" class="nav-link" data-hover="Works">Projects</a></li>
+                <li><a href="contact.html" class="nav-link" data-hover="Reach">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+            <div class="nav-hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+        </nav>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting"></span>
+                        <span class="title-name">I'm <span class="name-highlight">Joel Joby</span></span>
+                    </h1>
+                    <div class="typewriter-container">
+                        <span class="typewriter" data-strings='["Web Devoloper", "AI/ML Enthusiast"]'></span>
+                        <span class="typewriter-cursor">|</span>
+                    </div>
+                    <p class="hero-subtitle">Crafting immersive digital experiences at the intersection of design and technology</p>
+                    <div class="hero-cta">
+                        <a href="#about" class="cta-button cta-primary">
+                            <span>Explore My Universe</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="contact.html" class="cta-button cta-secondary">
+                            <span>Contact Me</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="profile-image-wrapper">
+                            <img src="images/img.jpg" alt="Profile Image" class="profile-image">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>Scroll</span>
+            </div>
+        </section>
+        
+        <section id="about" class="about">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-text">About Me</span>
+                </h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-paragraph">I'm a passionate <span class="text-highlight">AI & Data Science</span> student at RSET Kakkanad, with a strong interest in machine learning, data analytics, and problem-solving. Skilled in Python, ML algorithms, and data visualization, I enjoy turning raw data into meaningful insights.</p>
+                    <p class="about-paragraph">I actively work on projects, participate in hackathons, and keep up with the latest in AI. My goal? To build intelligent systems that make a real impact.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="1">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                    
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="4">0</div>
+                            <div class="stat-label">Programming Languages Known</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <div class="weather-widget">
+            <div class="weather-header">
+                <h3>Weather</h3>
+                <button class="weather-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="weather-content">
+                <div class="weather-data">
+                    <div class="weather-main">
+                        <div class="weather-icon">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <div class="weather-temp"></div>
+                        <div class="weather-desc"></div>
+                        <div class="weather-city"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://github.com/joeljoby5" class="social-link" aria-label="GitHub" target="_blank">
+                <i class="fab fa-github"></i>
+                <span class="social-tooltip">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/joel-joby-3a430637b/" class="social-link" aria-label="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+                <span class="social-tooltip">LinkedIn</span>
+            </a> <!--
+            <a href="#" class="social-link" aria-label="Dev.to">
+                <i class="fab fa-dev"></i>
+                <span class="social-tooltip">Dev.to</span>
+            </a>
+
+        -->
+        </div>
+        
+        <div class="custom-cursor"></div>
+        <div class="cursor-follower"></div>
+    </div>
+
+    <div class="weather-toggle-btn">
+        <i class="fas fa-cloud-sun"></i>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="assets/js/typewriter.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

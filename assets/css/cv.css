@@ -1,0 +1,430 @@
+/* CV Section Styles */
+.cv-section {
+    padding: 10rem 0 5rem;
+    min-height: 100vh;
+}
+
+.cv-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.cv-card {
+    background-color: var(--color-card);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px var(--color-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.cv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--color-shadow);
+}
+
+.cv-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 3rem;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    color: white;
+}
+
+.cv-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.cv-card-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.cv-card-body {
+    padding: 3rem;
+}
+
+/* Personal Info */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-label {
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+    font-weight: 500;
+}
+
+.info-value {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    left: -1.5rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    z-index: 1;
+}
+
+.timeline-date {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.8rem;
+}
+
+.timeline-content h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.institution {
+    font-size: 1.6rem;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.details {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.details span {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.details span::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* Skills */
+.skills-category {
+    margin-bottom: 3rem;
+}
+
+.skills-category:last-child {
+    margin-bottom: 0;
+}
+
+.skills-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skills-subtitle::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: var(--color-border);
+    margin-left: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.skill-level {
+    height: 6px;
+    background-color: var(--color-border);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.level-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    border-radius: 3px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-tag {
+    background-color: rgba(108, 92, 231, 0.1);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.skill-tag:hover {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Experience */
+.experience-item {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.experience-header {
+    margin-bottom: 1.5rem;
+}
+
+.experience-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.experience-meta {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+}
+
+.experience-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.experience-date::before {
+    content: '\f073';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.experience-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.experience-location::before {
+    content: '\f3c5';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.experience-details ul {
+    list-style-type: none;
+}
+
+.experience-details li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.experience-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* Certifications */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.certification-item {
+    background-color: rgba(108, 92, 231, 0.05);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.certification-item:hover {
+    background-color: rgba(108, 92, 231, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--color-shadow);
+}
+
+.certification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.certification-header h4 {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+}
+
+.certification-date {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    background-color: rgba(108, 92, 231, 0.1);
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+}
+
+.certification-issuer {
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+}
+
+.certification-link {
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.certification-link:hover {
+    color: var(--color-secondary);
+}
+
+.certification-link::after {
+    content: '\f35d';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+/* Download Button */
+.cv-download {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .cv-card-body {
+        padding: 2rem;
+    }
+    
+    .info-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .cv-section {
+        padding: 8rem 0 3rem;
+    }
+    
+    .cv-card-header {
+        padding: 1.5rem 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .experience-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline {
+        padding-left: 2rem;
+    }
+    
+    .timeline-item::before {
+        left: -1.3rem;
+    }
+}

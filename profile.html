@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Joel Joby</title>
+    <meta name="description" content="Joel Joby's personal profile including biography, career goals, and personal interests">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/js/main.js" as="script">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+</head>
+<body>
+    <!-- Particle Background Canvas -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-spinner">
+            <div class="spinner-sector spinner-sector-red"></div>
+            <div class="spinner-sector spinner-sector-blue"></div>
+            <div class="spinner-sector spinner-sector-green"></div>
+        </div>
+        <p class="preloader-text">Loading Profile</p>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Glassmorphism Navigation -->
+        <nav class="glass-nav">
+            <div class="nav-brand">
+                <span class="logo-text">My Portfolio</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link" data-hover="Home">Home</a></li>
+                <li><a href="profile.html" class="nav-link active" data-hover="Bio">Profile</a></li>
+                <li><a href="cv.html" class="nav-link" data-hover="Resume">CV</a></li>
+                <li><a href="education.html" class="nav-link" data-hover="Skills">Education</a></li>
+                <li><a href="projects.html" class="nav-link" data-hover="Works">Projects</a></li>
+                <li><a href="contact.html" class="nav-link" data-hover="Reach">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+            <div class="nav-hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+        </nav>
+        
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-text">Personal Profile</span>
+                </h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Get to know me beyond my technical skills</p>
+            </div>
+            
+            <div class="profile-content">
+                <!-- Biography Section -->
+                <div class="profile-card">
+                    <div class="profile-card-header">
+                        <div class="profile-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="profile-card-title">Biography</h3>
+                    </div>
+                    <div class="profile-card-body">
+                        <div class="profile-image-container">
+                            <img src="images/img.jpg" alt="Joel Joby" class="profile-photo">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="profile-text">
+                            <p>Hello! I'm Joel Joby, a passionate AI & Data Science student currently pursuing my Bachelor's degree at Rajagiri School of Engineering & Technology in Kochi, Kerala.</p>
+                            <p>Born and raised in Kerala, I've always been fascinated by technology and its potential to solve real-world problems.</p>
+                            <p>When I'm not coding or studying, you can find me exploring new technologies, participating in hackathons, or contributing to open-source projects. I believe in the power of technology to create positive change, and I'm committed to being part of that transformation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Career Goals Section -->
+                <div class="profile-card">
+                    <div class="profile-card-header">
+                        <div class="profile-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="profile-card-title">Career Goals</h3>
+                    </div>
+                    <div class="profile-card-body">
+                        <div class="goals-container">
+                            <div class="goal-item">
+                                <div class="goal-badge">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="goal-content">
+                                    <h4>AI Research & Development</h4>
+                                    <p>I aim to contribute to cutting-edge AI research, particularly in ML to develop solutions that enhance human capabilities.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="goal-item">
+                                <div class="goal-badge">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="goal-content">
+                                    <h4>Data-Driven Solutions</h4>
+                                    <p>My goal is to leverage data science to solve complex problems in education, and environmental sustainability, making data-driven decision-making accessible to all.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="goal-item">
+                                <div class="goal-badge">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="goal-content">
+                                    <h4>Continuous Learning</h4>
+                                    <p>I'm committed to lifelong learning, aiming to stay at the forefront of technological advancements while mentoring others in their tech journeys.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        
+        <!-- Cursor Effects -->
+        <div class="custom-cursor"></div>
+        <div class="cursor-follower"></div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
